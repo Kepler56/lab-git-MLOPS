@@ -2,9 +2,13 @@ name: CI  # The name of your workflow
 
 on:  # Triggers for the workflow
   push:
-    branches: [ main ]
+    branches:
+      - main
+      - 'feature/**'
   pull_request:
-    branches: [ main ]
+    branches: 
+      - main
+      - 'feature/**'
 
 jobs:
   build:  # The build job
